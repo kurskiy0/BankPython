@@ -37,6 +37,11 @@ def date_get():
 
 
 @pytest.fixture
+def date_slash():
+    return "10.11.2012"
+
+
+@pytest.fixture
 def date_zero():
     return "Некорректный формат даты"
 
@@ -65,5 +70,5 @@ def date_empty():
 
 
 @pytest.fixture
-def date_zero():
+def date_out():
     return "Отсутствует дата"

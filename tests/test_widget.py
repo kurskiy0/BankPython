@@ -9,6 +9,7 @@ def test_mask_account_card(card_zero, card_account, card_visa, card_another):
     assert mask_account_card("Visa Super Puper 1234567890123456") == card_another
 
 
-def test_get_date(date_get, date_zero):
+def test_get_date(date_get, date_zero, date_slash):
     assert get_date("2012-11-10T01:02:03.012345") == date_get
     assert get_date("0") == date_zero
+    assert get_date("2012/11/10T01:02:03.012345") == date_slash

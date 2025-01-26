@@ -51,7 +51,7 @@ def test_filter_by_state(state_executed, state_zero, state_empty):
     assert filter_by_state("") == state_empty
 
 
-def test_sort_by_date(date_empty, date_zero):
+def test_sort_by_date(date_empty, date_out):
     assert sort_by_date(
         [
             {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -103,5 +103,5 @@ def test_sort_by_date(date_empty, date_zero):
                 },
             ]
         )
-        == date_zero
+        == date_out
     )

@@ -14,9 +14,9 @@ def get_mask_card_number(card_number: str) -> str:
             )
         )
     elif len(card_number) != 16:
-        return 'Введен некорректный номер карты'
+        return "Введен некорректный номер карты"
     elif not card_number.isdigit():
-        return 'Введен некорректный номер карты'
+        return "Введен некорректный номер карты"
     return None
 
 
@@ -26,8 +26,7 @@ def get_mask_account(account_number: Union[int, str]) -> str:
         str_account_number = str(account_number)
         return "**" + str_account_number[16:]
     elif len(account_number) != 20:
-        return 'Введен некорректный номер счета'
+        return "Введен некорректный номер счета"
     elif not account_number.isdigit():
-        return 'Введен некорректный номер счета'
+        return "Введен некорректный номер счета"
     return None
-
