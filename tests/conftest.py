@@ -72,3 +72,29 @@ def date_empty():
 @pytest.fixture
 def date_out():
     return "Отсутствует дата"
+
+
+@pytest.fixture
+def filter_correct():
+    return [
+        {
+            "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+            "description": "Перевод организации"
+        },
+        {
+            "operationAmount": {"amount": "79114.93", "currency": {"name": "USD", "code": "USD"}},
+            "description": "Перевод со счета на счет"
+        },
+        {
+            "operationAmount": {"amount": "43318.34", "currency": {"name": "руб.", "code": "RUB"}},
+            "description": "Перевод со счета на счет"
+        },
+        {
+            "operationAmount": {"amount": "56883.54", "currency": {"name": "USD", "code": "USD"}},
+            "description": "Перевод с карты на карту",
+        },
+        {
+            "operationAmount": {"amount": "67314.70", "currency": {"name": "руб.", "code": "RUB"}},
+            "description": "Перевод организации"
+        },
+    ]
