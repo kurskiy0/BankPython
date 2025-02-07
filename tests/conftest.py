@@ -55,26 +55,6 @@ def state_executed():
 
 
 @pytest.fixture
-def state_zero():
-    return "State отсутствует в списке словарей"
-
-
-@pytest.fixture
-def state_empty():
-    return "Не введены данные"
-
-
-@pytest.fixture
-def date_empty():
-    return "Не введены данные"
-
-
-@pytest.fixture
-def date_out():
-    return "Отсутствует дата"
-
-
-@pytest.fixture
 def filter_correct():
     return [
         {

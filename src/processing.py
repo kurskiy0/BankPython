@@ -3,17 +3,15 @@ def filter_by_state(list_dict: list[dict], state_string: str = "EXECUTED") -> li
     state соответствует указанному значению."""
     new_dict = []
     for i in list_dict:
-        if not list_dict:
-            return "Не введены данные"
-        elif i["state"] == state_string:
+        if i["state"] == state_string:
             new_dict.append(i)
             return new_dict
         else:
-            return "State отсутствует в списке словарей"
+            return new_dict
 
 
 
 def sort_by_date(list_date: list, is_reverse: bool = True) -> list:
     """Функция возвращает новый список, отсортированный по дате"""
-    list_sorted = sorted(list_date, key=lambda x: x["date"], reverse=is_reverse)
+    list_sorted = list(sorted(list_date, key=lambda x: x["date"], reverse=is_reverse))
     return list_sorted
